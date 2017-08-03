@@ -1,0 +1,29 @@
+{
+  "name": "food-truck-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amparish/food-truck-app.git"
+  },
+  "author": "Alex Parish, Patrick Holtzman, Bert Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amparish/food-truck-app/issues"
+  },
+  "homepage": "https://github.com/amparish/food-truck-app#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.3.6",
+    "sequelize": "^4.4.2"
+  }
+}
