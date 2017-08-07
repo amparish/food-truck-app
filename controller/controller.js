@@ -37,7 +37,14 @@ router.get("/signUp",function(req,res){
 
 router.get("/logIn", function(req,res){
 	res.redirect("logIn.html");
-})
+});
+
+router.post("/user/create", function(req,res){
+	var user = req.body;
+	Data.create(user).then(function(){
+		res.redirect("../index.html");
+	});
+});
 
 //export router
 module.exports = router;
