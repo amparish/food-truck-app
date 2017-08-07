@@ -24,37 +24,23 @@
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="text" class="form-control" id="password" placeholder="Password">
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" id="vendor"> Sign up as a Vendor
-    </label>
-  </div>
-    <div class="checkbox">
-    <label>
-      <input type="checkbox" id="customer"> Sign up as a Customer
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default" id="submit">Submit</button>
 </form>
+  <button type="submit" class="btn btn-default" id="submit">Submit</button>
 </div>
 <script type="text/javascript">
+
 	$("#submit").on("click", function(e){
 		e.preventDefault();
 		var email = $("#email").val().trim();
 		var password = $("#password").val().trim();
-		var vendor;
-		if ($("#vendor").checked){
-			vendor = true;
-		}else{
-			vendor = false;
-		};
 		var user = {
-			vendor: vendor,
+			vendor: false,
 			clientEmail: email,
 			clientPassword: password
 		};
+    console.log(menu);
 		$.post("/signUp/create",user,function(req,res){});
 	});
 </script>
