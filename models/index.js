@@ -1,11 +1,13 @@
 var connection = require("../config/connection.js");
 var Sequelize = require("Sequelize");
 
-var Data= connection.define("data",{
+var Client= connection.define("clients",{
   info: Sequelize.STRING,
-  vendor: Sequelize.BOOLEAN
+  vendor: Sequelize.BOOLEAN,
+  clientEmail: Sequelize.STRING,
+  clientPassword: Sequelize.STRING
 },{
   timestamps: false
 })
 
-module.exports = Data;
+module.exports = Client;
