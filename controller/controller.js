@@ -7,12 +7,13 @@ var Client = require("../models/index.js");
 router.get("/",function(req,res){
 	res.redirect("index.html");
 });
-router.get("/auth", function(req,res){
-	res.redirect("auth.html");
+
+router.get("/auth",function(req,res){
+res.redirect("auth.html");
 })
 
-router.get("/signUp", function(req,res){
-	res.redirect("signUp.html");
+router.get("/vendorSignUp", function(req,res){
+	res.redirect("vendorSignUp.html");
 })
 
 router.get("/logIn", function(req,res){
