@@ -1,0 +1,14 @@
+	<nav id="header">
+		<div class="nav-wrapper">
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" id="header-margin">
+		</div>
+		{{#each menu}}
+			<div class="row menuItem">
+				<h1>{{this.foodName}}</h1>
+				<p>{{this.foodDescription}}</p>
+			</div>
+		{{/each}}				
+	</div>

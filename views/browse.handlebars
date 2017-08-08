@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TruckStop</title>
-</head>
-<body>
+
 	<nav id="header">
 		<div class="nav-wrapper">
 		</div>
@@ -12,12 +7,13 @@
 		<div class="row" id="header-margin">
 		</div>
 		{{#each foodTruck}}
-		<div class="row" id="truck{{this.id}}">
-	        <div class="col s12 truck">
-	        	<h2 class="title">{{this.companyName}}</h2>
-	        	<p class="description">{{this.description}}</p>
+			<div class="row">
+				<form action="/browse/truck/{{this.id}}" method="GET">
+					<button type="submit" class="truck">
+						<h1>{{this.companyName}}</h1>
+					</button>
+				</form>
 			</div>
-		</div>	
 		{{/each}}					
 	</div>
 <style type="text/css">
@@ -35,6 +31,7 @@ top:20px;
 }
 .description{
 	font-size:1em;
+	width:60%;
 
 }
 #header
@@ -51,8 +48,8 @@ top:20px;
 {
 	background-color:teal;
 	height:100px;
+	width:100%;
 	margin-top:10px;
+	z-index: 0;
 }
 </style>
-</body>
-</html>
