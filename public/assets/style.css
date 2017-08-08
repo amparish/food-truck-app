@@ -38,3 +38,9 @@ top:20px;
 background-color: blue;
 height:100px;
 }
+#cartImg
+{
+	height:50px;
+	width:10%;
+	float:right;
+}

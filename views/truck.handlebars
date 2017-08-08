@@ -1,14 +1,29 @@
 	<nav id="header">
 		<div class="nav-wrapper">
+			<a class="modal-trigger" href="#cart">
+				<img src="/assets/cart.png" id="cartImg"/>
+			</a>
 		</div>
 	</nav>
 	<div class="container">
 		<div class="row" id="header-margin">
+		</div>
+		<div class="row">
+			<h1>Menu</h1>
 		</div>
 		{{#each menu}}
 			<div class="row menuItem">
 				<h1>{{this.foodName}}</h1>
 				<p>{{this.foodDescription}}</p>
 			</div>
-		{{/each}}				
+		{{/each}}
+	  <!-- Modal Structure -->
+	  <div id="cart" class="modal">
+	    <div class="modal-content">
+	      <h4>Your Cart</h4>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">continue shopping</a>
+	    </div>
+	  </div>				
 	</div>

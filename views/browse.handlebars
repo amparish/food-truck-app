@@ -6,6 +6,9 @@
 	<div class="container">
 		<div class="row" id="header-margin">
 		</div>
+		<div class="row">
+			<h1>Menu</h1>
+		</div>
 		{{#each foodTruck}}
 			<div class="row">
 				<form action="/browse/truck/{{this.id}}" method="GET">
@@ -16,40 +19,4 @@
 			</div>
 		{{/each}}					
 	</div>
-<style type="text/css">
-/*#header-img
-{
-width:100%;
-height:100%;
-position:relative;
-top:20px;
-}*/
-.title{
-	font-size:2em;
-	margin-bottom: 0px;
-	line-height: 1;
-}
-.description{
-	font-size:1em;
-	width:60%;
 
-}
-#header
-{
-	height: 10em;
-	position:fixed;
-	z-index: 1;
-}
-#header-margin
-{
-	margin-bottom: 150px;
-}
-.truck
-{
-	background-color:teal;
-	height:100px;
-	width:100%;
-	margin-top:10px;
-	z-index: 0;
-}
-</style>
