@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TruckStop</title>
+</head>
+<body>
+	<nav id="header">
+		<div class="nav-wrapper">
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" id="header-margin">
+		</div>
+		{{#each foodTruck}}
+		<div class="row" id="truck{{this.id}}">
+	        <div class="col s12 truck">
+	        	<h2 class="title">{{this.companyName}}</h2>
+	        	<p class="description">{{this.description}}</p>
+			</div>
+		</div>	
+		{{/each}}					
+	</div>
+<style type="text/css">
+/*#header-img
+{
+width:100%;
+height:100%;
+position:relative;
+top:20px;
+}*/
+.title{
+	font-size:2em;
+	margin-bottom: 0px;
+	line-height: 1;
+}
+.description{
+	font-size:1em;
+
+}
+#header
+{
+	height: 10em;
+	position:fixed;
+	z-index: 1;
+}
+#header-margin
+{
+	margin-bottom: 150px;
+}
+.truck
+{
+	background-color:teal;
+	height:100px;
+	margin-top:10px;
+}
+</style>
+</body>
+</html>
