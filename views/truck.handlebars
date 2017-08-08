@@ -1,6 +1,6 @@
 	<nav id="header">
 		<div class="nav-wrapper">
-			<a class="modal-trigger" href="#cart">
+			<a class="modal-trigger" id="cartBtn" href="#cart">
 				<img src="/assets/cart.png" id="cartImg"/>
 			</a>
 		</div>
@@ -13,8 +13,9 @@
 		</div>
 		{{#each menu}}
 			<div class="row menuItem">
-				<h1>{{this.foodName}}</h1>
+				<h5>{{this.foodName}}</h5>
 				<p>{{this.foodDescription}}</p>
+				<a class="waves-effect waves-light btn addToCartBtn" id="{{this.foodName}}">add to cart</a>
 			</div>
 		{{/each}}
 	  <!-- Modal Structure -->
