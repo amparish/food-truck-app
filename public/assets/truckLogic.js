@@ -4,8 +4,6 @@ $(document).ready(function(){
 	$(".addToCartBtn").on("click", function(){
 		console.log(this.id);
 		sessionStorage.setItem("foodName",this.id);
-	});
-	$("#cartBtn").on("click", function(){
 		var menuItem = "<div>";
 		menuItem += sessionStorage.getItem("foodName");
 		menuItem += "</div>";
