@@ -1,3 +1,4 @@
+var order = require("");
 var accountSid = 'account SID here'; // Account SID from www.twilio.com/console
 var authToken = 'api key here';   // Auth Token from www.twilio.com/console
 
@@ -5,8 +6,8 @@ var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
 
 client.messages.create({
-    body: 'NEW ORDER: ' + '1 x Bacon/Egg/Cheese Taco',
-    to: '+12102626223',  // Text this number
+    body: 'NEW ORDER: ' + order.orderArr + 'Requests: ' + order.requestText + 'Total: $' + order.price,
+    to: '+1' + vendorNum,  // Text this number
     from: '+15128793978' // From a valid Twilio number
 }).then((message) => console.log(message.sid));
 
