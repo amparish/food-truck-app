@@ -2,10 +2,13 @@ var connection = require("../config/connection.js");
 var Sequelize = require("Sequelize");
 
 var Client= connection.define("clients",{
-  info: Sequelize.STRING,
-  vendor: Sequelize.BOOLEAN,
+  companyName: Sequelize.STRING,
   clientEmail: Sequelize.STRING,
-  clientPassword: Sequelize.STRING
+  clientPassword: Sequelize.STRING,
+  phoneNumber: Sequelize.STRING,
+  description: Sequelize.STRING,
+  location: Sequelize.STRING,
+  menu: Sequelize.STRING
 },{
   timestamps: false
 })
