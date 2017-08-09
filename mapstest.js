@@ -1,7 +1,7 @@
 // TESTING GOOGLE MAPS GEOCODING API - not sure where to implement this code, might use AJAX call instead
 
 var maps = require('@google/maps').createClient({
-  key: 'AIzaSyBIy-qu_cTZvSFnBXxSM2yWC3NJHSmP2EE'
+  key: 'API key here'
 });
 
 // "process.argv" for testing purposes only
