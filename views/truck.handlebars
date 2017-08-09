@@ -1,0 +1,30 @@
+<nav id="header">
+		<div class="nav-wrapper">
+			<a class="modal-trigger" id="cartBtn" href="#cart">
+				<img src="/assets/cart.png" id="cartImg"/>
+			</a>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" id="header-margin">
+		</div>
+		<div class="row">
+			<h1>Menu</h1>
+		</div>
+		{{#each menu}}
+			<div class="row menuItem">
+				<h5>{{this.foodName}}</h5>
+				<p>{{this.foodDescription}}</p>
+				<a class="waves-effect waves-light btn addToCartBtn" id="{{this.foodName}}">add to cart</a>
+			</div>
+		{{/each}}
+	  <!-- Modal Structure -->
+	  <div id="cart" class="modal">
+	    <div class="modal-content">
+	      <h4>Your Cart</h4>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">continue shopping</a>
+	    </div>
+	  </div>				
+	</div>

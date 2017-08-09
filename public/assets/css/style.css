@@ -1,0 +1,60 @@
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+body {
+   background-image: url("http://1001southstate.com/wp-content/uploads/2017/06/shutterstock_531969436.jpg");
+   background-repeat: no-repeat; 
+   background-position: center;
+   background-size: cover;
+   /*height: 100%;*/
+   min-height: 100%;
+   display: flex;
+   /*min-height: 100vh;*/
+   flex-direction: column;
+  }
+
+
+.container, {
+    size: cover;
+}
+
+/*buttons {
+    font-weight: bold;
+    font-size-adjust: 100%;
+    color: darkred;
+}*/
+
+
+
+
+
+@media screen and (max-width: 980px) {
+    body {
+        /*background-color: lightgray;*/
+    }
+    .wrapper{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        /*background-color: lightgray;*/
+    }
+    .wrapper{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        /*background-color: lightgray;*/
+    }
+    .wrapper{
+        width: 600px;
+    }
+}

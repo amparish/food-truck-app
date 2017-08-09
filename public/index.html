@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>truckstop</title>
+	<title>truck-stop</title>
 	<script
 		src="http://code.jquery.com/jquery-3.2.1.js"
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -13,64 +13,32 @@
 	<!-- Compiled and minified JavaScript -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 
-	<!-- Latest compiled and minified CSS -->
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-
-	<!-- Optional theme -->
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
-
-	<!-- Latest compiled and minified JavaScript -->
-	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
 </head>
+
 <body>
-	<div class="container">
+	<div class="container-fluid full">	
+	<div id="title" class="container">
 		<div class="row">
-			<div class="col s12">	
-				<nav>
-					<div class="nav-wrapper">
-						<a href="#" class="brand-logo"></a>
-					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="login.html">Log In</a></li>
-						<li><a href="clientType.html">Sign Up</a></li>
-					</ul>
-					</div>
-				</nav>
-			</div>	
-
-		<!--<div class="row">
-			<a class="btn btn-default" href="/clientType" role="button" id="signUp">Sign Up</a>
-		</div>
-		<div class="row">
-			<a class="btn btn-default" href="/logIn" role="button" id="logIn">Log In</a>
-		</div>	-->
-		</div>
-
-		<div class="row">
-			<div class="col s4"></div>
-			<div class="col s4">
-				<p>  	G
-					    o  
-		  			  Truckstop
-		  				r
-		  				m	
- 		  				e		
-		  				t</p>
+			<div class="col s1, m4"></div>
+			<div class="col s10, m4">	
+				<h1 style="color: #312A20"> Truck-Stop </h1>
 			</div>
-			<div class="col s4"></div>	
+			<div clss="col s1, m4"></div>	
 		</div>
-
-		<div class="row">
-			<footer class="page-footer">
-          		<div class="footer-copyright">
-           		 <div class="container">
-            		© 2017 Copyright Gourmet Truckstop
-            		<!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
-            	</div>
-          		</div>
-        	</footer>
-            
+	
+		<div id="buttons" class="row">
+			<div class="col s2"></div>
+			<div class="col s3">
+				<a style="color: red" href="truck.html" class="waves-effect waves-teal btn-flat">Customer</a>
+			</div>
+			<div class="col s2"></div>
+			<div class="col s3">
+				<a style="color: red" href="auth.html" class="waves-effect waves-teal btn-flat">Vendor</a>
+			</div>
+			<div class="col s2"></div>	
 		</div>
-
 	</div>
+	</div>	
 </body>
 </html>
