@@ -1,5 +1,5 @@
-var accountSid = 'ACfcad3f9f64cae52ab9d92ee23e854df0'; // Account SID from www.twilio.com/console
-var authToken = 'f20bc5f3eb5d5f634bfe76ece7c1d93d';   // Auth Token from www.twilio.com/console
+var accountSid = 'account SID here'; // Account SID from www.twilio.com/console
+var authToken = 'api key here';   // Auth Token from www.twilio.com/console
 
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
@@ -15,5 +15,9 @@ client.messages.create({
 if customer, text order confirmation in body?
 	- or send to html page that displays confirmation message (would save on SMS cost)
 else text order information (to vendor)
+
+Separate JS files for message to customer and vendor?
+
+Send same text to both?
 
 */
