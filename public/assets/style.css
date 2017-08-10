@@ -5,6 +5,10 @@ height:100%;
 position:relative;
 top:20px;
 }*/
+body
+{
+background-image: url("/assets/background.png");
+}
 .title{
 	font-size:2em;
 	margin-bottom: 0px;
@@ -19,35 +23,114 @@ top:20px;
 {
 	height: 10em;
 	position:fixed;
-	z-index: 1;
+	z-index: 100;
+	background-color: navy;
+	text-align: center;
 }
 #header-margin
 {
-	margin-bottom: 150px;
+	margin-bottom: 140px;
 }
-.truck
+.truck,
+.landingBtn
 {
-	background-color:teal;
+	background-color:#4fb9e9;
 	height:100px;
-	width:100%;
-	margin-top:10px;
+	width:90%;
+	margin-top:20px;
+	margin-left:6.5%;
 	z-index: 0;
+}
+.truck:focus
+{
+	background-color:yellow;
+}
+.landingBtn:focus
+{
+	background-color: yellow;
 }
 .menuItem
 {
-background-color: blue;
+background-color: #4fb9e9;
 height:100px;
 }
 #cartImg
 {
-	height:50px;
-	width:10%;
+	height:45px;
+	width:8%;
 	float:right;
 }
 .addToCartBtn
 {
 	float:right;
+	background-color: #112787;
 }
-#company{
-	font-size:2.5em;
+.addToCartBtn:hover
+{
+	background-color: yellow;
+	color:navy;
+}
+#truckstopLogo
+{
+	width: 100%;
+	height:110%;
+}
+.companyTitle
+{
+	font-size:2em;
+}
+#map
+{
+	width:100%;
+	height:200px;
+	margin-top:40px;
+}
+.container
+{
+	margin-left:10%;
+	margin-right:20%;
+	width:80%;
+	margin-top:80px;
+}
+#browseTitle
+{
+	width:100%;
+	height:10%;
+	position:fixed;
+	z-index: 90;
+}
+.companyName
+{
+	z-index: 100;
+	color:white;
+	display:inline;
+	position: relative;
+	bottom:130px;
+	font-size: 3em;
+}
+.company
+{
+	width:90%;
+}
+
+.navBtn
+{
+	z-index: 100;
+	position: relative;
+	top:15px;
+	width: 15%;
+	margin-left:3%;
+	height:30px;
+	background-color: transparent;
+	border:none;
+}
+.navBtn:focus
+{
+	background-color: transparent;
+	color:transparent;
+}
+#menuNavBtn,
+#cartNavBtn
+{
+	margin-left: 24%;
 }
