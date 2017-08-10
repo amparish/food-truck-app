@@ -39,6 +39,7 @@ router.get("/browse/truck/:id", function(req,res){
 			id: id
 		}
 	}).then(function(data){
+		console.log(data)
 		var menuItem = JSON.parse(data[0].menu);
 		res.render("truck", {foodTruck: data , menu: menuItem})
 	});
@@ -48,5 +49,3 @@ router.get("/browse/truck/:id", function(req,res){
 //export router
 module.exports = router;
 
-
-	////example of how we can interact with data from JSON in info column
