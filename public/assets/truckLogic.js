@@ -61,14 +61,13 @@ $(document).ready(function(){
 			cart.push({key,name,description,price});
 	});
 	//this will actually be for delete just testing logic
-	console.log(cart)
 
 
 		// $(".delete").on("click", function(){
 		// 	console.log("i can delete!" + this)
 		// })
 		$(document).on("click",".delete",function(){
-			console.log(this.value)
+			var self = this;
 			$("#"+this.value).remove();
 			counter = counter -1;
 			if (counter > 1){
@@ -79,13 +78,17 @@ $(document).ready(function(){
 			}else{
 				$("#cartCounter").addClass("hidden");
 			}
-		})
+			cart.filter(function(obj) {
+				console.log(self.value)
+			    return obj.key !== self.value;
+			});
+			console.log(cart);
+		});
 
-	$("#cartNavBtn").on("click", function(e){
+	$("#checkout").on("click", function(e){
 		e.preventDefault();
-		console.log(cart);
-		// $(document).on("click","#delete"+cart.i.key,function(){
-		// 	console.log("i can delete this")
-		// })
-	})
+		$.post("/checkout", cart, function(data){
+			console.log(data);
+		});
+	});
 });
