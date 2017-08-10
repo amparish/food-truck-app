@@ -152,3 +152,17 @@ height:100px;
 	width:30px;
 	z-index: 1000;
 }
+.itemTable
+{
+	border:2px solid black;
+}
+.tableHeader
+{
+	border: 2px solid black;
+	background-color: navy;
+	color:white;
+}
+#itemList
+{
+	border:2px solid black;
+}
