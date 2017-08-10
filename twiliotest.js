@@ -8,7 +8,7 @@ var client = new twilio(accountSid, authToken);
 var vendorNum = order.vendorNum;
 
 client.messages.create({
-    body: 'NEW ORDER' + '\nName: ' + order.orderName + '\nPhone: ' + order.customerPhone + '\n' + order.orderArr + '\nRequests: ' + order.requestText + '\nTotal: $' + order.price,
+    body: 'NEW ORDER' + '\nName: ' + order.customerName + '\nPhone: ' + order.customerPhone + '\n' + order.orderArr + '\nRequests: ' + order.requestText + '\nTotal: $' + order.price,
     to: '+1' + vendorNum,  // Text this number
     from: '+15128793978' // From a valid Twilio number
 }).then((message) => console.log(message.sid));
