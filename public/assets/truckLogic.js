@@ -87,7 +87,14 @@ $(document).ready(function(){
 
 	$("#checkout").on("click", function(e){
 		e.preventDefault();
-		$.post("/checkout", cart, function(data){
+		console.log(cart);
+		var order = {
+			customerName: "pat",
+			customerPhone: "5123503638",
+			orderArr: cart,
+			request: null,
+		}
+		$.post("/checkout", order, function(data){
 			console.log(data);
 		});
 	});

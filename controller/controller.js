@@ -46,7 +46,7 @@ router.get("/browse/truck/:id", function(req,res){
 
 
 router.post("/checkout",function(req,res){
-	
+	console.log(req.body);
 });
 
 //export router
