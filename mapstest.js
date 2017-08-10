@@ -1,12 +1,11 @@
 // TESTING GOOGLE MAPS GEOCODING API - not sure where to implement this code, might use AJAX call instead
-
+var vendor = require(""); // require file that contains vendor locations as variables
 var maps = require('@google/maps').createClient({
-  key: 'API key here'
+  key: 'AIzaSyBIy-qu_cTZvSFnBXxSM2yWC3NJHSmP2EE'
 });
 
-// "process.argv" for testing purposes only
-var defaultAddress = process.argv[2];
-var coordinates = [process.argv[2], process.argv[3]];
+var defaultAddress = vendor.mainLocation; // string that contains full address info
+var coordinates = vendor.tempLocation; // should be an array of two numbers that are latitude/longitude of the location
 
 // Adding a Google Map to HTML page https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 
@@ -27,3 +26,5 @@ maps.reverseGeocode({
     console.log(response.json.results);
   }
 });
+
+// export this somewhere??
