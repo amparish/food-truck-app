@@ -44,7 +44,7 @@ $(document).ready(function(){
 			display += "</table>";
 			$("#itemList").append(display);
 			$("#totalPrice").html(
-				"pre-tax: "+"$"+total+"   "+
+				"pre-tax: "+"$"+total.toFixed(2)+"   "+
 				"tax: "+"$"+tax+"   "+
 				"Total Price: $"+totalSale
 			);
