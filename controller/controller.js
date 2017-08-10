@@ -45,6 +45,9 @@ router.get("/browse/truck/:id", function(req,res){
 	});
 });
 
+router.get("/cart", function(req,res){
+	console.log(req.body);
+});
 
 //export router
 module.exports = router;

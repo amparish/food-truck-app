@@ -64,6 +64,7 @@ height:100px;
 {
 	float:right;
 	background-color: #112787;
+	z-index: 1;
 }
 .addToCartBtn:hover
 {
@@ -133,4 +134,21 @@ height:100px;
 #cartNavBtn
 {
 	margin-left: 24%;
+}
+.hidden
+{
+	display: none;
+}
+#cartCounter
+{
+	position:relative;
+	bottom:30px;
+	left:95%;
+	border:2px solid black;
+	background-color: red;
+	color:white;
+	border-radius: 100%;
+	height:30px;
+	width:30px;
+	z-index: 1000;
 }

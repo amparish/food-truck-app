@@ -17,6 +17,7 @@
 		<a class="modal-trigger" id="cartBtn" href="#cart">
 			<button class="navBtn" id="cartNavBtn"></button>
 		</a>
+		<div class="hidden" id="cartCounter"></div>
 	</div>
 	<div class="container">
 		<div class="row">
@@ -28,7 +29,9 @@
 					<form class="row menuItem">
 						<h5>{{this.foodName}}</h5>
 						<p>{{this.foodDescription}}</p>
-						<a class="waves-effect waves-light btn addToCartBtn" id="{{this.foodName}}" name="{{this.foodName}} - {{this.foodDescription}} {{this.price}}">add to cart</a>
+						<button type="submit" class="waves-effect waves-light btn addToCartBtn" 
+						name='{{this.foodName}},{{this.foodDescription}},{{this.price}}'>
+						add to cart</button>
 					</form>
 				{{/each}}
 			  <!-- Modal Structure -->
