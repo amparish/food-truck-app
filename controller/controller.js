@@ -2,6 +2,7 @@
 var express = require("express");
 var router = express.Router();
 var Client = require("../models/index.js");
+var Order = require("../models/sms.js");
 //landing page - inserts all burgers into handlebars
 router.get("/",function(req,res){
 	res.redirect("index.html");
@@ -46,9 +47,15 @@ router.get("/browse/truck/:id", function(req,res){
 
 
 router.post("/checkout",function(req,res){
-	console.log(req.body);
+	// console.log(req.body);
+	var customerName = req.body.customerName;
+	var customerPhone = req.body.customerPhone;
+	var order = req.body.orderArr;
+	var specialRequests = req.body.request;
+	console.log(customerPhone,customerName,order,specialRequests)
+	Order.sendText("patrick","5123503638","one crabby patty please","hold the plankton");
 });
 
-//export router
+//export router 
 module.exports = router;
 

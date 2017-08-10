@@ -9,7 +9,7 @@ var methodOverride = require("method-override");
 //set up express
 var app = express();
 //try to use port 8080 if available
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 //require router or controller
 var routes = require("./controller/controller.js");
 // Sets up the Express app to handle data parsing
