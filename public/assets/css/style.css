@@ -6,7 +6,7 @@ html {
 }
 
 body {
-   background-image: url("http://1001southstate.com/wp-content/uploads/2017/06/shutterstock_531969436.jpg");
+   background-image: ("/asset/background.png");
    background-repeat: no-repeat; 
    background-position: center;
    background-size: cover;
@@ -17,6 +17,10 @@ body {
    flex-direction: column;
   }
 
+form {
+    margin-top: 70px;
+
+}
 
 .container, {
     size: cover;
