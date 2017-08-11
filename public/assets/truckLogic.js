@@ -78,11 +78,15 @@ $(document).ready(function(){
 			}else{
 				$("#cartCounter").addClass("hidden");
 			}
-			cart.filter(function(obj) {
-				console.log(self.value)
-			    return obj.key !== self.value;
+			var updatedCart = cart.filter(function(obj) {
+				var objToDelete = self.value;
+				objToDelete = parseInt(objToDelete);
+				var objToKeep = obj.key;
+				objToKeep = parseInt(objToKeep);
+				console.log
+			    return objToKeep !== objToDelete;
 			});
-			console.log(cart);
+			cart = updatedCart;
 		});
 
 	$("#checkout").on("click", function(e){
