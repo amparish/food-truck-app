@@ -1,7 +1,7 @@
 // TESTING GOOGLE MAPS GEOCODING API - not sure where to implement this code, might use AJAX call instead
 var vendor = require(""); // require file that contains vendor locations as variables
 var maps = require('@google/maps').createClient({
-  key: 'AIzaSyBIy-qu_cTZvSFnBXxSM2yWC3NJHSmP2EE'
+  key: 'AIzaSyBQF8ObbvuQLJDt-en7VICr5VEX18C13VU'
 });
 
 var defaultAddress = vendor.mainLocation; // string that contains full address info

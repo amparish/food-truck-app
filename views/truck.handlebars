@@ -73,8 +73,22 @@
 			</div>				
 		</div>
 		<div class="row">
-			<div class="map-container">
-				<img src="/assets/sampleMap.jpg" id="map">
-			</div>
+			<div id="map" style="height: 250px; width: 250px;"></div>
+		    <script>
+		      function initMap() {
+		        var truckLocation = {lat: 30.286989, lng: -97.728915};
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		          zoom: 15,
+		          center: truckLocation
+		        });
+		        var marker = new google.maps.Marker({
+		          position: truckLocation,
+		          map: map
+		        });
+		      }
+		    </script>
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQF8ObbvuQLJDt-en7VICr5VEX18C13VU&callback=initMap">
+		    </script>
 		</div>	
 	</div>
