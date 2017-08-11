@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>truckstop</title>
-	<script
-  src="http://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-</head>
-
 <body style="background-color: #D3AF8F">
   <div class="container">
     <h4>Company Information<h4>
     <div class="row">
-      <form  class="col s12">
+      <form  method="get" action="location" {{this.id}} class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input id="Company Name" type="text" class="validate">
+            <input id="companyName" type="text" class="validate">
             <label style="color:white" for="company_name">Company Name</label>
           </div>
         </div>
@@ -51,11 +36,17 @@
         </div>
         <div class="row">
             <div class="col s12">
-              <button class="btn waves-effect waves-light" type="submit" name="action">Update
+              <button method="push" {{this.location}} {{this.phone}}class="btn waves-effect waves-light" type="submit" name="action">Update
               </button>
             </div>
           </div>
       </form>
   </div>
+
+  <script>
+    $('#location').val($('#street').val() + ' ' +
+                         $('#city').val() + ', ' +
+                         $('#state').val() + ' ' +
+                         $('#zip').val() );
+    </script>
 </body>
-</html>

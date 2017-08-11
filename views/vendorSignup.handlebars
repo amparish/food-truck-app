@@ -1,61 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>truckstop</title>
-	<script
-  src="http://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-</head>
-
 <body style="background-color: #D3AF8F">
   <div class="container">
     <h4>Company Information<h4>
     <div class="row">
-      <form  class="col s12">
+      <form  method="post" action="#location" class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input id="Company Name" type="text" class="validate">
+            <input id="companyName" type="text" class="validate">
             <label style="color:white" for="company_name">Company Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="Street Address" type="text" class="validate">
+            <input id="street" type="text" class="validate">
             <label style="color:white" for="street_address">Street Address</label>
           </div>
           <div class="row">
           <div class="input-field col s4">
-            <input id="City" type="text" class="validate">
+            <input id="city" type="text" class="validate">
             <label style="color:white" for="city">City</label>
           </div>
           <div class="input-field col s4">
-            <input id="State" type="text" class="validate">
+            <input id="state" type="text" class="validate">
             <label style="color:white" for="state">State</label>
+            
           </div>
           <div class="input-field col s4">
-            <input id="Zip" type="text" pattern="[0-9]{5}" class="validate">
+            <input id="zip" type="text" pattern="[0-9]{5}" class="validate">
             <label style="color:white" for="zip">Zip Code</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="Password" type="password" class="validate">
+            <input id="clientPassword" type="password" class="validate">
             <label style="color:white" for="password">Password</label>
           </div>
           <div class="input-field col s6">
-            <input id="Email" type="email" class="validate">
+            <input id="clientEmail" type="email" class="validate">
             <label style="color:white" for="email">Email</label>
           </div> 
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="Phone" type="tel" class="validate">
+            <input id="phoneNumber" type="tel" class="validate">
             <label style="color:white" for="phone">Phone</label>
           </div>
         </div>
@@ -67,7 +53,13 @@
             </div>
           </div>
       </form>
+    </div>
   </div>
-  
+
+  <script>
+    $('#location').val($('#street').val() + ' ' +
+                         $('#city').val() + ', ' +
+                         $('#state').val() + ' ' +
+                         $('#zip').val() );
+    </script>
 </body>
-</html>
