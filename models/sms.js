@@ -9,7 +9,7 @@ var Order = {
 	sendText: function(customerName,customerPhone,order,specialRequests){
 		client.messages.create({
 			body:'NEW ORDER' + '\nName: ' + customerName + '\nPhone: ' + customerPhone + '\n' + order + '\nRequests: ' + specialRequests,
-			to: "5123503638",
+			to: "+12102626223",
 			from: '+15128793978',
 		}).then((message) => console.log(message.sid));
 	}
