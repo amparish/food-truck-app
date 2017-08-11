@@ -60,13 +60,9 @@ $(document).ready(function(){
 			id+=1;
 			cart.push({key,name,description,price});
 	});
-	//this will actually be for delete just testing logic
 
-
-		// $(".delete").on("click", function(){
-		// 	console.log("i can delete!" + this)
-		// })
 		$(document).on("click",".delete",function(){
+			var total = 0;
 			var self = this;
 			$("#"+this.value).remove();
 			counter = counter -1;
@@ -83,10 +79,27 @@ $(document).ready(function(){
 				objToDelete = parseInt(objToDelete);
 				var objToKeep = obj.key;
 				objToKeep = parseInt(objToKeep);
-				console.log
 			    return objToKeep !== objToDelete;
 			});
 			cart = updatedCart;
+			var index = parseInt(this.value);
+				for (var i=totalArr.length-1; i>=0; i--) {
+				    if (totalArr[i] === totalArr[index]) {
+				        totalArr.splice(i, 1);
+				    }
+				}			
+			for(var i=0; i < totalArr.length; i++){
+				total += totalArr[i];
+			}
+			var tax = total * .0825;
+			tax = parseFloat(tax);
+			var totalSale = tax + total;
+			totalSale = totalSale.toFixed(2);
+			tax = tax.toFixed(2);
+			$("#totalPrice").html(
+				"pre-tax: "+"$"+total.toFixed(2)+"   "+
+				"tax: "+"$"+tax+"   "+
+				"Totalnew Price: $"+totalSale);
 		});
 
 	$("#checkout").on("click", function(e){
