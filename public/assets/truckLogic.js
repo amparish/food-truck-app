@@ -1,4 +1,15 @@
 $(document).ready(function(){
+		      function initMap() {
+		        var truckLocation = {lat: 30.286989, lng: -97.728915};
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		          zoom: 15,
+		          center: truckLocation
+		        });
+		        var marker = new google.maps.Marker({
+		          position: truckLocation,
+		          map: map
+		        });
+		      }	
 	//modal control
 	$('.modal').modal();
 	var counter = 0;
@@ -108,6 +119,6 @@ $(document).ready(function(){
 			orderArr: cart,
 			request: null,
 		}
-		sessionStorage.setItem("order",order);
+		sessionStorage.setItem("order",JSON.stringify(order));
 	});
 });

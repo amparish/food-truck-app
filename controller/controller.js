@@ -1,8 +1,7 @@
-//require dependencies
+//requir//require dependencies
 var express = require("express");
 var router = express.Router();
 var Client = require("../models/index.js");
-//var geocode = require("../models/map.js");
 var Order = require("../models/sms.js");
 //landing page - inserts all burgers into handlebars
 router.get("/",function(req,res){
@@ -41,26 +40,29 @@ router.get("/browse/truck/:id", function(req,res){
 			id: id
 		}
 	}).then(function(data){
-		//console.log(data);
-		//var defaultAddress = JSON.parse(data[0].location);
-		//console.log(defaultAddress);
+		var defaultAddress = data[0].location;
 		var menuItem = JSON.parse(data[0].menu);
-		//geocode.getCoord();
-		res.render("truck", {foodTruck: data, menu: menuItem/*, location: defaultAddress*/});
+		geocode.getCoord();
+		res.render("truck", {foodTruck: data, menu: menuItem, truckLocation: defaultAddress});
 	});
 });
 
-
 router.post("/checkout",function(req,res){
-	// console.log(req.body);
-	var customerName = req.body.customerName;
-	var customerPhone = req.body.customerPhone;
-	var order = req.body.orderArr;
-	var specialRequests = req.body.request;
-	console.log(customerPhone,customerName,order,specialRequests)
-	Order.sendText("patrick","5123503638","one crabby patty please","hold the plankton");
+	console.log(req.body);
+	res.render("confirmation");
 });
+
+router.post("/confirmation",function(req,res){
+	// console.log(req.body);
+	// var customerName = req.body.customerName;
+	// var customerPhone = req.body.customerPhone;
+	// var order = req.body.orderArr;
+	// var specialRequests = req.body.request;
+	// console.log(customerPhone,customerName,order,specialRequests)
+	// Order.sendText("patrick","5123503638","one crabby patty please","hold the plankton");
+})
 
 //export router 
 module.exports = router;
+
 
