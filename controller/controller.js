@@ -9,9 +9,21 @@ router.get("/",function(req,res){
 	res.redirect("index.html");
 });
 
+router.get("/admin", function(req,res){
+res.redirect("admin.html");
+});
+
+router.get("/vendorUpdate", function(req,res){
+res.render("vendorUpdate")
+});
+
+router.get("/menuUpdate", function(req,res){
+res.render("menu");
+});
+
 router.get("/auth",function(req,res){
 res.redirect("auth.html");
-})
+});
 
 router.get("/vendorSignUp", function(req,res){
 	res.render("vendorSignup");
