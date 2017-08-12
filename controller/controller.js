@@ -2,7 +2,7 @@
 var express = require("express");
 var router = express.Router();
 var Client = require("../models/index.js");
-//var geocode = require("../models/map.js");
+var geocode = require("../models/map.js");
 var Order = require("../models/sms.js");
 //landing page - inserts all burgers into handlebars
 router.get("/",function(req,res){
@@ -41,12 +41,10 @@ router.get("/browse/truck/:id", function(req,res){
 			id: id
 		}
 	}).then(function(data){
-		//console.log(data);
-		//var defaultAddress = JSON.parse(data[0].location);
-		//console.log(defaultAddress);
+		var defaultAddress = data[0].location;
 		var menuItem = JSON.parse(data[0].menu);
-		//geocode.getCoord();
-		res.render("truck", {foodTruck: data, menu: menuItem/*, location: defaultAddress*/});
+		geocode.getCoord();
+		res.render("truck", {foodTruck: data, menu: menuItem, truckLocation: defaultAddress});
 	});
 });
 
