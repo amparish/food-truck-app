@@ -23,5 +23,13 @@ var total = preTaxTotal + tax;
 $(".preTax").html("sub total - "+"$"+preTaxTotal.toFixed(2));
 $(".tax").html("tax - "+"$"+tax.toFixed(2));
 $(".totalSale").html("total sale - "+"$"+total.toFixed(2));
+$("#placeOrder").on("click", function(){
+	var orderObj = {
+		customerName: $(".name").val().trim(),
+		customerPhone: $(".phone").val().trim(),
+		order: orderArr,
+	}
 
+	$.post("/placeOrder",orderObj,function(){});
+});
 });

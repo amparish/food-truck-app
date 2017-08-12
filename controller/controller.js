@@ -48,20 +48,24 @@ router.get("/browse/truck/:id", function(req,res){
 	});
 });
 
-router.post("/checkout",function(req,res){
+router.post("/confirmation",function(req,res){
 	console.log(req.body);
 	res.render("confirmation");
 });
 
-router.post("/confirmation",function(req,res){
-	// console.log(req.body);
-	// var customerName = req.body.customerName;
-	// var customerPhone = req.body.customerPhone;
-	// var order = req.body.orderArr;
-	// var specialRequests = req.body.request;
-	// console.log(customerPhone,customerName,order,specialRequests)
-	// Order.sendText("patrick","5123503638","one crabby patty please","hold the plankton");
-})
+router.post("/placeOrder",function(req,res){
+	console.log(req.body);
+});
+
+// router.post("/confirmation",function(req,res){
+// 	// console.log(req.body);
+// 	// var customerName = req.body.customerName;
+// 	// var customerPhone = req.body.customerPhone;
+// 	// var order = req.body.orderArr;
+// 	// var specialRequests = req.body.request;
+// 	// console.log(customerPhone,customerName,order,specialRequests)
+// 	// Order.sendText("patrick","5123503638","one crabby patty please","hold the plankton");
+// })
 
 //export router 
 module.exports = router;
