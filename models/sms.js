@@ -8,8 +8,8 @@ var client = new twilio(accountSid, authToken);
 var Order = {
 	sendText: function(customerName,customerPhone,order,specialRequests){
 		client.messages.create({
-			body:'NEW ORDER' + '\nName: ' + customerName + '\nPhone: ' + customerPhone + '\n' + order + '\nRequests: ' + specialRequests,
-			to: "+12102626223",
+			body:'NEW ORDER' + '\nName: ' + customerName + '\nPhone: ' + customerPhone + '\n' + order,
+			to: "+15123503638",
 			from: '+15128793978',
 		}).then((message) => console.log(message.sid));
 	}

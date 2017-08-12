@@ -66,13 +66,21 @@ router.post("/confirmation",function(req,res){
 });
 
 router.post("/placeOrder",function(req,res){
-	console.log(req.body);
 	var customerName = req.body.customerName;
 	var customerPhone = req.body.customerPhone;
-	var order = req.body.orderArr;
+	var order = req.body.order;
 	var specialRequests = req.body.request;
-	console.log(customerPhone, customerName, order, specialRequests);
-	Order.sendText(customerName, customerPhone, order, specialRequests);
+	console.log(order);
+	var message = "Order:";
+	for (var i = 0; i < order.length;i++){
+		message += "\n"+order[i].name;
+	}
+	if (specialRequests !== undefined){
+		message += '\nRequests: ' + specialRequests;
+	}
+	console.log(message);
+
+	Order.sendText(customerName, customerPhone, message);
 });
 
 // router.post("/confirmation",function(req,res){
