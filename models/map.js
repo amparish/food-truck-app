@@ -5,13 +5,14 @@ var maps = require('@google/maps').createClient({
 
 // Geocode an address.
 var geocode = {
-	getCoord: function(){
+	getCoord: function(defaultAddress){
 		maps.geocode({
 			address: defaultAddress
 		}, function(err, response) {
 			if (!err) {
 		    	console.log(response.json.results);
 			}
+			console.log(response);
 		});
 	},
 	getAddr: function(){

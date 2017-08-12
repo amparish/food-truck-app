@@ -2,6 +2,7 @@
 var express = require("express");
 var router = express.Router();
 var Client = require("../models/index.js");
+var geocode = require("../models/map.js");
 var Order = require("../models/sms.js");
 //landing page - inserts all burgers into handlebars
 router.get("/",function(req,res){
