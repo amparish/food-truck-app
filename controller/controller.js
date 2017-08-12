@@ -83,16 +83,6 @@ router.post("/placeOrder",function(req,res){
 	Order.sendText(customerName, customerPhone, message);
 });
 
-// router.post("/confirmation",function(req,res){
-// 	// console.log(req.body);
-// 	// var customerName = req.body.customerName;
-// 	// var customerPhone = req.body.customerPhone;
-// 	// var order = req.body.orderArr;
-// 	// var specialRequests = req.body.request;
-// 	// console.log(customerPhone,customerName,order,specialRequests)
-// 	// Order.sendText("patrick","+15123503638","one crabby patty please","hold the plankton");
-// })
-
 //export router 
 module.exports = router;
 

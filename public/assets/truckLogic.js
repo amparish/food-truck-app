@@ -55,9 +55,9 @@ $(document).ready(function(){
 			display += "</table>";
 			$("#itemList").append(display);
 			$("#totalPrice").html(
-				"pre-tax: "+"$"+total.toFixed(2)+"   "+
-				"tax: "+"$"+tax+"   "+
-				"Total Price: $"+totalSale
+				"\npre-tax: "+"$"+total.toFixed(2)+
+				"\ntax: "+"$"+tax+
+				"\nTotal: $"+totalSale
 			);
 			counter += 1;
 			if (counter > 1){
@@ -108,9 +108,9 @@ $(document).ready(function(){
 			totalSale = totalSale.toFixed(2);
 			tax = tax.toFixed(2);
 			$("#totalPrice").html(
-				"pre-tax: "+"$"+total.toFixed(2)+"   "+
-				"tax: "+"$"+tax+"   "+
-				"Totalnew Price: $"+totalSale);
+				"\npre-tax: "+"$"+total.toFixed(2)+
+				"\ntax: "+"$"+tax+
+				"\nTotal: $"+totalSale);
 		});
 
 	$("#checkout").on("click", function(e){

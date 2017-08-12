@@ -12,6 +12,7 @@ for (var i=0;i<orderArr.length;i++){
 	var displayItem = "<div>";
 	displayItem += orderArr[i].name + "-  " + orderArr[i].description + "       $"+ orderArr[i].price;
 	displayItem += "</div>";
+	displayItem += "<hr>"
 	$(".order").append(displayItem)
 
 	preTaxTotal += parseFloat(orderArr[i].price);
@@ -28,8 +29,10 @@ $("#placeOrder").on("click", function(){
 		customerName: $(".name").val().trim(),
 		customerPhone: $(".phone").val().trim(),
 		order: orderArr,
+		request: $("#specialRequest").val().trim()
 	}
 
 	$.post("/placeOrder",orderObj,function(){});
+	alert("Your order has been placed!");
 });
 });
