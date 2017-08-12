@@ -14,7 +14,7 @@ res.redirect("auth.html");
 })
 
 router.get("/vendorSignUp", function(req,res){
-	res.redirect("vendorSignUp.html");
+	res.render("vendorSignup");
 })
 
 router.get("/logIn", function(req,res){
