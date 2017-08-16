@@ -63,11 +63,12 @@ router.post("/placeOrder",function(req,res){
 	var customerName = req.body.customerName;
 	var customerPhone = req.body.customerPhone;
 	var order = req.body.order;
+
 	var specialRequests = req.body.request;
 	console.log(order);
 	var message = "Order:";
 	for (var i = 0; i < order.length;i++){
-		message += "\n"+order[i].name;
+		message += "\n"+order[i].foodName;
 	}
 	if (specialRequests !== undefined){
 		message += '\nRequests: ' + specialRequests;
