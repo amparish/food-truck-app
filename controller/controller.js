@@ -8,44 +8,38 @@ var Order = require("../models/sms.js");
 router.get("/",function(req,res){
 	res.redirect("index.html");
 });
-
-router.get("/admin", function(req,res){
-res.redirect("admin.html");
-});
-
-router.get("/vendorUpdate", function(req,res){
-res.render("vendorUpdate")
-});
-
-router.get("/menuUpdate", function(req,res){
-res.render("menu");
-});
-
+//sends user to log in sign up page
 router.get("/auth",function(req,res){
 res.redirect("auth.html");
 });
-
-router.get("/vendorSignUp", function(req,res){
-	res.render("vendorSignup");
-})
-
+//sends user to login page
 router.get("/logIn", function(req,res){
 	res.redirect("logIn.html");
 });
-
-router.post("/signUp/create", function(req,res){
-	//****************will need to set up some auth handling here***************
-	// Client.create(user).then(function(data){
-		res.redirect("/browse");
-	// });
+//sends user to sign up page
+router.get("/vendorSignUp", function(req,res){
+	res.render("vendorSignup");
+})
+//sends user to admin page where vendors can manipulate their data
+router.get("/admin", function(req,res){
+res.redirect("admin.html");
 });
+//sends user to page where they can update their company info
+router.get("/vendorUpdate", function(req,res){
+res.render("vendorUpdate")
+});
+//sends user to page where they can update their menu
+router.get("/menuUpdate", function(req,res){
+res.render("menu");
+});
+//sends user to page that displays trucks for browsing
 router.get("/browse",function(req,res){
 	Client.findAll({
 	}).then(function(data){
 		res.render("browse", { foodTruck: data});
 	});
 });
-
+//sends user to specific truck page based off user input
 router.get("/browse/truck/:id", function(req,res){
 	var id = req.params.id;
 	Client.findAll({
@@ -59,12 +53,12 @@ router.get("/browse/truck/:id", function(req,res){
 		res.render("truck", {foodTruck: data, menu: menuItem, truckLocation: defaultAddress});
 	});
 });
-
+//sends user to confirmation page to confirm their order
 router.post("/confirmation",function(req,res){
 	console.log(req.body);
 	res.render("confirmation");
 });
-
+//places order
 router.post("/placeOrder",function(req,res){
 	var customerName = req.body.customerName;
 	var customerPhone = req.body.customerPhone;

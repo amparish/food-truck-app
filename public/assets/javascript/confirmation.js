@@ -10,7 +10,7 @@ var preTaxTotal = 0;
 //loop through array to append each item and calculate pre tax total
 for (var i=0;i<orderArr.length;i++){
 	var displayItem = "<div>";
-	displayItem += orderArr[i].name + "-  " + orderArr[i].description + "       $"+ orderArr[i].price;
+	displayItem += orderArr[i].foodName + "-  " + orderArr[i].foodDescription + "       $"+ orderArr[i].price;
 	displayItem += "</div>";
 	displayItem += "<hr>"
 	$(".order").append(displayItem)
