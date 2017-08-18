@@ -37,6 +37,7 @@ router.get("/browse",function(req,res){
 	Client.findAll({
 	}).then(function(data){
 		res.render("browse", { foodTruck: data});
+		console.log(data);
 	});
 });
 //sends user to specific truck page based off user input

@@ -8,7 +8,8 @@ var Client= connection.define("clients",{
   phoneNumber: Sequelize.STRING,
   description: Sequelize.STRING,
   location: Sequelize.STRING,
-  menu: Sequelize.STRING
+  menu: Sequelize.STRING,
+  photo: Sequelize.STRING
 },{
   timestamps: false
 })

@@ -1,17 +1,17 @@
-/*#header-img
+h1,h2,h3,h4,h5,p{
+	margin:0px;
+}
+.border
 {
-width:100%;
-height:100%;
-position:relative;
-top:20px;
-}*/
+	border:2px solid white;
+}
 body
 {
-background-image: url("/assets/images/background.png");
+	background: url("/assets/images/background.png");
+	background-size: 50% 50%;
 }
 .title{
 	font-size:2em;
-	margin-bottom: 0px;
 	line-height: 1;
 }
 .description{
@@ -21,37 +21,51 @@ background-image: url("/assets/images/background.png");
 }
 #header
 {
-	height: 10em;
 	position:fixed;
 	z-index: 100;
-	background-color: navy;
+	background-color: #1d4663;
 	text-align: center;
 }
 #header-margin
 {
 	margin-bottom: 140px;
 }
-.truck,
+.truck
+{
+	background-color:#1d4663;
+	width:95%;
+	margin-left: 2.5%;
+	border: none;
+	border-bottom:2px solid white;
+}
 .landingBtn
 {
-	background-color:#4fb9e9;
-	height:100px;
-	width:90%;
-	margin-top:20px;
-	margin-left:6.5%;
-	z-index: 0;
+	background-color:#1d4663;
+	width:80%;
+	margin-left: 7.5%;
+	margin-top:80px;
+	border: 2px solid white;
+	height: 100px;
+}
+.truck:hover
+{
+background-color: #39D12C;
+}
+.landingBtn:hover
+{
+	background-color: #39D12C;
 }
 .truck:focus
 {
-	background-color:yellow;
+	background-color:#39D12C;
 }
 .landingBtn:focus
 {
-	background-color: yellow;
+	background-color: #39D12C;
 }
 .menuItem
 {
-background-color: #4fb9e9;
+background-color: #1d4663;
 height:100px;
 }
 #cartImg
@@ -63,13 +77,18 @@ height:100px;
 .addToCartBtn
 {
 	float:right;
-	background-color: #112787;
+	background-color: #2C8CD1;
 	z-index: 1;
+	margin-bottom: 10px;
 }
 .addToCartBtn:hover
 {
-	background-color: yellow;
+	background-color: #2C8CD1;
 	color:navy;
+}
+.addToCartBtn:focus
+{
+	background-color: #2C8CD1;
 }
 #truckstopLogo
 {
@@ -79,19 +98,24 @@ height:100px;
 .companyTitle
 {
 	font-size:2em;
+	float:left;
 }
 #map
 {
-	width:100%;
+	width:50%;
 	height:200px;
-	margin-top:40px;
+	margin: 0px 25%;
 }
-.container
+.main-content
 {
-	margin-left:10%;
-	margin-right:20%;
-	width:80%;
-	margin-top:80px;
+	width:75%;
+	margin: 12.5%;
+	background-color: #1d4663;
+}
+.main-content h1
+{
+	text-align: center;
+	color:white;
 }
 #browseTitle
 {
@@ -114,51 +138,6 @@ height:100px;
 	width:90%;
 }
 
-.navBtn
-{
-	z-index: 100;
-	position: fixed;
-	width: 15%;
-	height:10%;
-	background-color: transparent;
-	border:none;
-}
-.modal-trigger
-{
-	margin-left: 82.5% ;
-}
-
-.navBtn:focus
-{
-	background-color: transparent;
-	color:transparent;
-}
-#menuNavBtn
-{
-	margin-left: 42.5%;
-}
-#mapNavBtn
-{
-	margin-left: 2.5%;
-}
-
-.hidden
-{
-	display: none;
-}
-#cartCounter
-{
-	position:fixed;
-	margin-left:95%;
-	margin-bottom: 5px;
-	border:2px solid black;
-	background-color: red;
-	color:white;
-	border-radius: 100%;
-	height:30px;
-	width:30px;
-	z-index: 100;
-}
 .itemTable
 {
 	border:2px solid black;
@@ -166,10 +145,81 @@ height:100px;
 .tableHeader
 {
 	border: 2px solid black;
-	background-color: navy;
+	background-color: #1d4663;
 	color:white;
 }
 #itemList
 {
 	border:2px solid black;
+}
+.truckImg
+{
+	width:100%;
+	height:150px;
+	float: left;
+}
+.font-white
+{
+	color:white;
+}
+.row
+{
+	margin-bottom: 5px;
+}
+.nav-wrapper
+{
+	background-color: #1d4663;
+}
+.map-content
+{
+	width:75%;
+	margin: 80px 12.5%;
+	padding: 5%;
+	background-color: #1d4663;
+}
+.location-content
+{
+	text-align: center;
+}
+#cart
+{
+	height: 100%;
+	width: 100%;
+}
+.menu-container h1
+{
+	text-align: center;
+	color:white;
+}
+@media only screen and (max-width: 980px){
+	html
+	{
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	html
+	{
+		font-size: 11px;
+	}
+
+}
+@media only screen and (max-width: 500px){
+	html
+	{
+		font-size: 10px;
+	}
+	.main-content,
+	.map-content
+	{
+		margin: 12.5% 0px;
+		padding: 5%;
+		width:100%;
+	}
+	#map
+	{
+		width:90%;
+		margin: 5%;
+	}
 }

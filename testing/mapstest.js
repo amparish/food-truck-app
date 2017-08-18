@@ -10,6 +10,7 @@ var coordinates = vendor.tempLocation; // should be an array of two numbers that
 // Adding a Google Map to HTML page https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 
 // Geocode an address.
+
 maps.geocode({
   address: defaultAddress
 }, function(err, response) {

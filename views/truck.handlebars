@@ -1,39 +1,43 @@
-	<nav id="header">
-		<div class="nav-wrapper">
-		<img src="/assets/images/truckstopVendor.png" alt="truck stop" id="truckstopLogo">
-			<div class="company">
-			{{#each foodTruck}}
-				<h1 class="companyName">{{this.companyName}}</h1>
-			{{/each}}
-			</div>
-		</div>
-	</nav>
-	<div class="row" id="header-margin">
-	</div>
-	<div class="row">
-		<img src="/assets/images/truckNav.png" id="browseTitle">
-		<button class="navBtn" id="mapNavBtn"></button>
-		<button class="navBtn" id="menuNavBtn"></button>
-		<a class="modal-trigger" id="cartBtn" href="#cart">
-			<button class="navBtn" id="cartNavBtn"></button>
-		</a>
-		<div class="hidden" id="cartCounter"></div>
-	</div>
-	<div class="container">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        	<ul id="slide-out" class="side-nav">
+	          <li><a href="#">browse</a></li>
+	          <li><a href="#">menu</a></li>
+	          <li><a href="#">map</a></li>
+		    </ul>
+	    	<a href="#" data-activates="slide-out" class="button-collapse show-on-large left"><i class="material-icons menu hide-on-large-only">menu</i>
+	    	</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">browse</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">map</a></li>
+          <li><a class="modal-trigger" id="cartBtn" href="#cart">cart</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+	<div class="main-content">
 		<div class="row">
 			<div class="menu-container">
-<!-- 				<div class="row">
-					<h1>Menu</h1>
-				</div> -->
-				{{#each menu}}
-					<form class="row menuItem">
-						<h5>{{this.foodName}}</h5>
-						<p>{{this.foodDescription}}</p>
-						<button type="submit" class="waves-effect waves-light btn addToCartBtn" 
-						name='{{this.foodName}},{{this.foodDescription}},{{this.price}}'>
-						add to cart</button>
-					</form>
-				{{/each}}
+				<<h1>MENU</h1>
+				<hr>
+					{{#each menu}}
+						<div class="row">
+							<div class="col s12 truck">
+								<div class="row font-white">
+									<h1 class="companyTitle">{{this.foodName}}</h1>
+								</div>
+								<div class="row font-white">
+									<P>{{this.foodDescription}}</P>	
+								</div>	
+								<button type="submit" class="waves-effect waves-light btn addToCartBtn" 
+								name='{{this.foodName}},{{this.foodDescription}},{{this.price}}'>
+								add to cart
+								</button>													
+							</div>
+						</div>
+					{{/each}}
 			  <!-- Modal Structure -->
 			  <div id="cart" class="modal">
 			    <div class="modal-content">
@@ -74,8 +78,15 @@
 			  </div>				
 			</div>				
 		</div>
-		<div class="row">
-			<div id="map" style="height: 250px; width: 250px;"></div>
+	</div>
+		<div class="row map-content">
+			<div id="map">
+			</div>
+			{{#each foodTruck}}
+			<div class="location-content">
+				<h1 class="companyTitle font-white">{{this.location}}</h1>
+			</div>
+			{{/each}}
 		    <script>
 		      function initMap() {
 		        var truckLocation = {lat: 30.286989, lng: -97.728915};
@@ -93,4 +104,4 @@
 		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQF8ObbvuQLJDt-en7VICr5VEX18C13VU&callback=initMap">
 		    </script>
 		</div>	
-	</div>
+	

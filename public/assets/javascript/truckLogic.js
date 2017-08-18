@@ -12,6 +12,8 @@ $(document).ready(function(){
 		      }	
 	//modal control
 	$('.modal').modal();
+	//side nav control
+	$(".button-collapse").sideNav();
 	//set counter to 0
 	var counter = 0;
 	//set id to 0

@@ -1,12 +1,12 @@
 USE foodtruck_db;
-INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu)
-VALUES ("The Chum Bucket","holtzman.patrick@gmail.com","lskdjf","5123503638","The worst burgers in town", "1101 awesome street Austin, Tx 78730", '[{"foodName":"chumburger","foodDescription":"its practically tolerable","price":"5.95"},{"foodName":"crabby patty","foodDescription":"I am actually looking to buy the formula","price":"10.95"}]');
+INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu,photo)
+VALUES ("The Chum Bucket","holtzman.patrick@gmail.com","lskdjf","5123503638","The worst burgers in town! The Crabby Patty has really been cramping our style.", "1101 awesome street Austin, Tx 78730", '[{"foodName":"chumburger","foodDescription":"its practically tolerable","price":"5.95"},{"foodName":"crabby patty","foodDescription":"I am actually looking to buy the formula","price":"10.95"}]',"https://pbs.twimg.com/profile_images/527637825018015744/E9XPYmos.jpeg");
 USE foodtruck_db;
-INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu)
-VALUES ("Pats Taco Shack","holtzman.patrick@gmail.com","lskdjf","5123503638","The Greatest Tacos Ever", "1101 awesome street Austin, Tx 78730", '[{"foodName":"Amazing Taco","foodDescription":"Amazing Taco Ingredients","price":"5.95"},{"foodName":"Milkshake","foodDescription":"Chocolate!","price":"2.00"}]');
+INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu,photo)
+VALUES ("Pats Taco Shack","holtzman.patrick@gmail.com","lskdjf","5123503638","The Greatest Tacos Ever", "1101 awesome street Austin, Tx 78730", '[{"foodName":"Amazing Taco","foodDescription":"Amazing Taco Ingredients","price":"5.95"},{"foodName":"Milkshake","foodDescription":"Chocolate!","price":"2.00"}]',"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg");
 USE foodtruck_db;
-INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu)
-VALUES ("Bert's til it Hurts","holtzman.patrick@gmail.com","lskdjf","5123503638","Kick Ass BBQ", "1101 awesome street Austin, Tx 78730", '[{"foodName":"pulled pork sandwhich","foodDescription":"choose your very own pig!","price":"7.95"},{"foodName":"Chili Cheese Fries","foodDescription":"Yum!","price":"5.00"}]');
+INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu,photo)
+VALUES ("Bert's til it Hurts","holtzman.patrick@gmail.com","lskdjf","5123503638","Kick Ass BBQ", "1101 awesome street Austin, Tx 78730", '[{"foodName":"pulled pork sandwhich","foodDescription":"choose your very own pig!","price":"7.95"},{"foodName":"Chili Cheese Fries","foodDescription":"Yum!","price":"5.00"}]',"https://1.bp.blogspot.com/-4ZiQn8erC6o/VsKuoJZ51zI/AAAAAAAAA3E/fG_HMpyCwkU/s1600/IMG_1541.JPG");
 USE foodtruck_db;
-INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu)
-VALUES ("Alex's Bistro","holtzman.patrick@gmail.com","lskdjf","5123503638","World's Best Sandwhiches", "1101 awesome street Austin, Tx 78730", '[{"foodName":"Grilled Cheese","foodDescription":"An american classic","price":"4.95"},{"foodName":"Club","foodDescription":"All the best fixings!","price":"6.00"}]');
+INSERT INTO clients (companyName,clientEmail,clientPassword,phoneNumber,description,location,menu,photo)
+VALUES ("Alex's Bistro","holtzman.patrick@gmail.com","lskdjf","5123503638","World's Best Sandwhiches", "1101 awesome street Austin, Tx 78730", '[{"foodName":"Grilled Cheese","foodDescription":"An american classic","price":"4.95"},{"foodName":"Club","foodDescription":"All the best fixings!","price":"6.00"}]',"https://i2.wp.com/www.bistroromano.com/wp-content/uploads/2013/10/Bistro-Romano-Tables.jpg?resize=2000%2C925");
